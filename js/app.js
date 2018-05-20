@@ -1,9 +1,5 @@
 const main = document.querySelector("#main");
-var avatar = document.querySelector('img');
-var fullname = document.querySelector('#name');
-var email = document.querySelector('#email');
-var city = document.querySelector('#city');
-var url = 'https://randomuser.me/api/';
+const url = 'https://randomuser.me/api/';
 
 function handleErrors(response){
   if (!response.ok){

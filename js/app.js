@@ -14,7 +14,9 @@ function Employee(first, last, email, city, pic, phone, address, birthday) {
 }
 
 function closeModal(){
-  document.querySelector("#modal").style.display = 'none';
+  $("#modal").css('display', 'none');
+  $('.modal-container').empty();
+
 }
 
 function handleErrors(response){

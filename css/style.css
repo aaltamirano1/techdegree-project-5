@@ -7,13 +7,19 @@ body{
   top: 0px;
   z-index: 	-1;
 }
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90vw;
+}
 h1{
 	text-transform: uppercase;
 	font-size: 1.5em;
 	font-weight: 600;
 	letter-spacing: 3px;
 	opacity: .7;
-	margin: 40px auto;
+	margin: 40px;
 	padding-left: 20px;
 	max-width: 1200px;
 }
@@ -31,7 +37,6 @@ hr {
 #main{
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 1200px;
 	padding: 0 40px;
 	justify-content: space-between;
 	margin: auto;
@@ -45,8 +50,10 @@ hr {
 	align-items: center;
 	margin: 0 5px 25px 5px;
 	flex-basis: 31%;
-	max-width: 365px;
 	background-color: white;
+}
+.employee:hover{
+  box-shadow: 0px 5px 5px #EEE;
 }
 .profile-pic{
 	border-radius: 100%;
@@ -80,7 +87,8 @@ hr {
 #modal{
 	background-color: rgba(0,0,0,0.4);
 	width: 100vw;
-	height: 100vh;
+	height: 100%;
+  min-height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
@@ -96,7 +104,7 @@ hr {
 	flex-direction: column;
 	border: 2px solid #DADFE1;
 	border-radius: 8px;
-	padding: 20px;
+	padding: 20px 40px;
 	align-items: center;
 	max-width: 	300px;	
 }
@@ -127,10 +135,27 @@ hr {
 .modal-container h3,
 .modal-container p{
 	margin: 10px 0;
+  text-transform: capitalize;
 }
 .modal-container .name{
 	color: #515254;
 }
+.modal-container .email{
+  text-transform: lowercase;
+}
+.modal-container .address{
+  text-align:  center;
+}
 .modal-container p{
 	color: #888;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1250px){
+  #main{
+    justify-content: space-around;
+  } 
+  .employee{
+    flex-grow: 1;
+  }
 }
